@@ -1,0 +1,19 @@
+﻿@model Casgem_Portfolio.Models.Entities.TblProject
+@{
+    ViewBag.Title = "UpdateProject";
+    Layout = "~/Views/Shared/_PortfolioAdminLayout.cshtml";
+}
+
+<h2>Referans Güncelleme Sayfası</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.ProjectId)
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.ProjectName, new { @class = "form-control" })
+    <br />
+    <label>Email Adresi</label>
+    @Html.TextBoxFor(x => x.ProjectContent, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+</form>
+
+
